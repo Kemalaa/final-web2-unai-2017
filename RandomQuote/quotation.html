@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+	<head>
+		<title> 
+			Quotation Web II 
+		</title>
+		<!-- ini untuk manggil si bootstrap-->
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	<body>
+
+	<!-- ini untuk jquery -->
+
+		<script src="jquery-3.2.0.min.js"></script>
+		<script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+		<script type="text/javascript" >
+			$(document).ready(function() {
+
+				$("#div4").show();
+				
+				$("#btn1").click(function(event){
+					
+					$.ajax({
+    					url: 'http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1',
+    					datatype: 'jsonp',
+      					success: function(data) {
+        				var r = data.shift(); // The data is an array of posts. Grab the first one.
+	      				var colors =['#16a085', '#27ae60', '#2c3e50', '#f39c12', '#e74c3c', '#9b59b6', '#FB6964', '#342224', "#472E32", "#BDBB99", "#77B1A9", "#73A857"];
+	      				var n = Math.floor(Math.random() * colors.length);
+	      				currentQuote = r.content;
+	      				currentAuthor = r.title;
+						$("#quote1").html(r.content);
+						$("#span1").text(r.title);
+						
+				    	$('#tweet').attr('href', 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('"' + currentQuote + '" ' + currentAuthor));
+	      				},
+	      				cache : false
+      				})
+					$("#div4").show();
+
+					$("#div4").animate({opacity: 0}, 500,
+						function() {
+          					$(this).animate({opacity: 1}, 500);
+					});
+
+					$("#div5").animate({opacity: 0}, 500,
+						function() {
+						$(this).animate({opacity: 1}, 500);
+					});
+				});	
+			});
+		</script>
+
+
+	<!-- disini mulai coding-->
+	<div id="div1" class="container">
+		<div id="div2" class="row">
+			<div id="div3" class="quotes">
+				<i class="fa fa-quote-right"></i>
+				<p id="quote1">
+					Hi! Wanna see some quotes?
+				</p>
+			</div>
+			<div id="div4" class="author">
+				<span id="span1">Who's the Author?</span>
+			</div>
+			<div id="button">
+				<a id="tweet" class="btn" title= "Tweet this quote!" target="_blank">
+					<i class="fa fa-twitter"></i>
+				</a>
+				<button id="btn1" class="btn"> What's New?</button>
+			</div>
+		</div>
+		<span class="footer">by Kemala Dewi</span>
+	</div>
+
+	</body>
+</html>
+
+
