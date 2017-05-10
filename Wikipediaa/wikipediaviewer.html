@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+	<head>
+		<title> 
+			Wikipedia Viewer
+		</title>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Orbitron" >
+
+	</head>
+	<body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script src="wikipedia-api.js"></script>
+	<div id="div1" class="container">
+	<center>
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Wikipedia_Romanian_large_logo.png">
+	</center>
+	<h1 style="font-family: Orbitron;">Wikipedia Viewer!</h1>
+		<div id="search" class="row">
+			<form>
+				<input type="text" id="query" class="form-control" placeholder="Let's find out about..." autofocus/> 
+				<button id="submit" class="btn btn-primary" type="submit">
+					Search!
+				</button>
+			</form>
+		</div>
+		<div id="list-result" class="row">
+
+			<ul id="article-list">
+				
+			</ul>
+			<div id="blank">Can't Find what you need :(</div>
+		</div>
+	</div>
+	</body>
+</html>
+
+
