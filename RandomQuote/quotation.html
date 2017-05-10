@@ -27,14 +27,12 @@
     					datatype: 'jsonp',
       					success: function(data) {
         				var r = data.shift(); // The data is an array of posts. Grab the first one.
-	      				var colors =['#16a085', '#27ae60', '#2c3e50', '#f39c12', '#e74c3c', '#9b59b6', '#FB6964', '#342224', "#472E32", "#BDBB99", "#77B1A9", "#73A857"];
-	      				var n = Math.floor(Math.random() * colors.length);
 	      				currentQuote = r.content;
 	      				currentAuthor = r.title;
 						$("#quote1").html(r.content);
 						$("#span1").text(r.title);
-						
-				    	$('#tweet').attr('href', 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('"' + currentQuote + '" ' + currentAuthor));
+				
+				    	$('#tweet').attr('href', 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('"' + currentQuote + '" ' +currentAuthor));
 	      				},
 	      				cache : false
       				})
@@ -44,15 +42,9 @@
 						function() {
           					$(this).animate({opacity: 1}, 500);
 					});
-
-					$("#div5").animate({opacity: 0}, 500,
-						function() {
-						$(this).animate({opacity: 1}, 500);
-					});
 				});	
 			});
 		</script>
-
 
 	<!-- disini mulai coding-->
 	<div id="div1" class="container">
