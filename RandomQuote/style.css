@@ -1,5 +1,5 @@
 body{
-	background-color: #95a5a6;
+	background-color: #D8C898;
 	font-weight: 400;
 
 }
@@ -19,26 +19,31 @@ div {
 
 #div2 {
 	margin:8% auto auto auto;
-	padding: 40px 50px;
-	background-color: white;
-	width: 500px;
+	padding-top: 70px;
+	padding-bottom: 60px;
+	padding-left: 30px;
+	padding-right: 30px;
+	background: url("http://3.bp.blogspot.com/-pE8yhMlp_vQ/T7Gc6kgsAcI/AAAAAAAAAr0/MAGms6j3oEw/s1600/Old_Paper_by_struckdumb.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	/*width: auto;
+	height: auto;*/
 	border-radius: 6px;
 	position: relative;
 	display: table;
 }
 
 #quote1 {
-	color: #95a5a6;
+	color: #000;
 }
 
 .quotes {
-	text-align: center;
+	text-align: left;
 	font-size: 1.75em;
 	font-weight: 500;
 	width: 450px;
 	height: auto;
 	clear: both;
-
 }
 .author {
 	width: 450px;
@@ -60,7 +65,7 @@ div {
 	border-radius: 8px;
 	border: none;
 	color: #ffffff;
-	background-color: pink;
+	background-color: #D8C898;
 	outline: none;
 	padding: 10px 10px 10px 10px;
 	font-size: 0.75em;
@@ -89,7 +94,7 @@ div {
   border:none;
   border-radius:3px;
   color:#fff;
-  background-color:pink;
+  background-color:#D8C898;
   outline:none;
   font-size:1.8em;
   padding: 3px 18px 6px 18px;
